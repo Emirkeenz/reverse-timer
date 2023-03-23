@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100wh;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.timer-background {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://s3-alpha-sig.figma.com/img/4d11/ed34/4f8162f7e4f227951a99fbff10627c70?Expires=1680480000&Signature=jAk4UZRtWuqIF2Sy1SIy07mHaGJrOQYXSo1LQmsFg094K1cdyZcxG9bzSn44KNhjwBHjQD-rnMGjbqW0dV77M0YV0sLeeIshr1ZOtWozWaZwbb~DiIGZvcvcVhdZZAz1ZPvPAYS3-gUhERF5VWM6a1KhMiJb0QB9cDGmt~c0DvsQ7xe5YfyA~Bm7CJvmKU1umAdy7cIzBc3ZeDobMCWImV0pmqFCN0toNa9c~ZtnJLtWZgQiCegVRCNPT2Ch8VjF0JiuPd0QKRHcPjYuBb~sUXW1nWl-DYNdBEPJbatjvQjH1jezU8mpFypGnFueBbs~mnlk-BnqvtA~pnlCUUdbaA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.timer-container {
+  width: 100%;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+
+  gap: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.timer-clock {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.timer-clock div p {
+  font-size: 25px;
+  padding: 10px;
+}
+
+.timer-clock div p:first-child {
+  border-right: 3px solid #fff;  
+}
+
+.timer-clock div:last-child p {
+  border-right: none;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .timer-clock div p {
+    font-size: 16px;
+    padding: 8px;
   }
 }
